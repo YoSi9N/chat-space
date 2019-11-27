@@ -2,13 +2,11 @@
 
 ## users テーブル
 
-| Column    | Type    | Options                        |
-| --------- | ------- | ------------------------------ |
-| user_name | string  | null: false                    |
-| email     | string  | null: false, unique: true      |
-| email     | index   | null: false, unique: true      |
-| password  | string  | null: false,                   |
-| group_id  | integer | null: false, foreign_key: true |
+| Column   | Type    | Options                        |
+| -------- | ------- | ------------------------------ |
+| user     | string  | null: false, index: true       |
+| email    | string  | null: false, unique: true      |
+| password | string  | null: false,                   |
 
 
 ### Association
@@ -17,11 +15,9 @@
 
 ## groups テーブル
 
-| Column     | Type    | Options                       |
-| ---------- | ------- | ----------------------------- |
-| group_name | string  | null: false                   |
-| user_id    | integer | null: false foreign_key: true |
-| group_id   | integer | null: false foreign_key: true |
+| Column   | Type    | Options                       |
+| -------- | ------- | ----------------------------- |
+| name     | string  | null: false                   |
 
 
 ### Association
@@ -30,15 +26,15 @@
 
 ## groups_users テーブル
 
-| Column   | Type    | Options                        |
-| -------- | ------- | ------------------------------ |
-| user_id  | integer | null: false, foreign_key: true |
-| group_id | integer | null: false, foreign_key: true |
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| user_id  | references | null: false, foreign_key: true |
+| group_id | references | null: false, foreign_key: true |
 
 
 ### Association
-+ has_many :users
-+ has_many :groups
++ belongs_to :user
++ belongs_to :group
 
 
 ## messages テーブル
@@ -46,11 +42,12 @@
 | -------- | ------- | ----------------------------- |
 | text     | text    | null: false                   |
 | image    | text    |                               |
-| user_id  | integer | null: false foreign_key: true |
-| group_id | integer | null: false foreign_key: true |
+| user_id  | references | null: false foreign_key: true |
+| group_id | references | null: false foreign_key: true |
 
 
 ### Association
 + belongs_to :user
 + belongs_to :group
+
 
