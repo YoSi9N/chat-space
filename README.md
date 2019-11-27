@@ -9,7 +9,7 @@
 | email     | index   | null: false, unique: true      |
 | password  | string  | null: false,                   |
 | group_id  | integer | null: false, foreign_key: true |
-|           |         |                                |
+
 
 ### Association
 + has_many :groups, through: :groups_users
@@ -22,7 +22,7 @@
 | group_name | string  | null: false                   |
 | user_id    | integer | null: false foreign_key: true |
 | group_id   | integer | null: false foreign_key: true |
-|            |         |                               |
+
 
 ### Association
 + has_many :users, through: :groups_users
@@ -34,7 +34,7 @@
 | -------- | ------- | ------------------------------ |
 | user_id  | integer | null: false, foreign_key: true |
 | group_id | integer | null: false, foreign_key: true |
-|          |         |                                |
+
 
 ### Association
 + has_many :users
@@ -48,7 +48,7 @@
 | image    | text    |                               |
 | user_id  | integer | null: false foreign_key: true |
 | group_id | integer | null: false foreign_key: true |
-|          |         |                               |
+
 
 ### Association
 + belongs_to :user
