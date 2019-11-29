@@ -1,0 +1,60 @@
+.main
+ .main__header
+  .main__header__left
+   .main__header__left--name
+    Group_name
+    .main__header__left--member
+     Member
+  .main__header__right
+   =link_to "#", class: "main__header__right--edit" do
+    Edit
+ .main__content
+  .main__content__messages
+   .main__content__messages--poster
+    .main__content__messages--poster--name
+    Name
+    .main__content__messages--poster--time
+     2019-11-28
+   .main__content__messages--text
+    text
+  .main__content__messages
+   .main__content__messages--poster
+    .main__content__messages--poster--name
+     Name
+    .main__content__messages--poster--time
+     2019-11-28
+   .main__content__messages--text
+    text
+  .main__content__messages
+   .main__content__messages--poster
+    .main__content__messages--poster--name
+     Name
+    .main__content__messages--poster--time
+     2019-11-28
+   .main__content__messages--text
+    text
+  .main__content__messages
+   .main__content__messages--poster
+    .main__content__messages--poster--name
+     Name
+    .main__content__messages--poster--time
+     2019-11-28
+   .main__content__messages--text
+    text
+  .main__content__messages
+   .main__content__messages--poster
+    .main__content__messages--poster--name
+     Name
+    .main__content__messages--poster--time
+     2019-11-28
+   .main__content__messages--text
+    text    
+ .main__footer
+  %form.main__footer__form
+   .main__footer__form__input-box
+    %input.main__footer__form__input-box--text{type: "text", placeholder: "type a message"}
+    %label.main__footer__form__input-box--icon
+     = icon('fas', 'image')
+     %input.main__footer__form__input-box--icon--none{type: "file"}
+   %input.main__footer__form--send{type: "submit", value: "Send"}
+  %end
