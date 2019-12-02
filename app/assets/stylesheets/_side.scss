@@ -42,11 +42,12 @@
     overflow: scroll;
     &--group-name{
       font-size: 15px;
-
+      color:white;
       font-weight: bold;
-    }
+      }
     &--notice{
       font-size: 11px;
+      color: white;
       margin: 5px 0 40px 0;
     }
   }
