@@ -95,5 +95,7 @@ $(function(){
   })
   
 });
-  setInterval(reloadMessages, 7000);
+  if(document.URL.match(/..messages/)){
+    setInterval(reloadMessages, 7000);
+  }
 });
