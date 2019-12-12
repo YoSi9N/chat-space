@@ -16,6 +16,7 @@
     justify-content: space-between;
     &__left{
       position: relative;
+      width: 100%;
       &--name{
         font-size: 20px;
         color: #333333;
@@ -27,8 +28,11 @@
           position: absolute;
           bottom: 0;
           display: flex;
+          
+          
           &--list{
             margin-left: 10px;
+            font-size: 12px;
           }
       }
     }

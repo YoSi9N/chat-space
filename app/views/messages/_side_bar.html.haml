@@ -5,7 +5,7 @@
         = current_user.name
       .side__header__user--icon
         =link_to new_group_path, class: "side__header__user--icon side__header__user--create" do
-          = icon("far", "clone")
+          = icon("far", "edit")
           %span<>
         =link_to edit_user_path(current_user), class: "side__header__user--icon side__header__user--edit" do
           = icon("fas", "cog")
